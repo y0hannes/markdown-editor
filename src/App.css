@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-family: sans-serif;
+}
+
+.editor {
+  width: 50%;
+  padding: 1rem;
+  font-size: 1rem;
+  border-right: 1px solid #ddd;
+  resize: none;
+  outline: none;
+}
+
+.preview {
+  width: 50%;
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: #181a1b;
+}
