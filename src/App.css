@@ -31,7 +31,7 @@ body {
 
 .interaction button {
   padding: 8px 16px;
-  background-color: #3a3a3a;
+  background-color: #b93535;
   color: #e0e0e0;
   border: none;
   border-radius: 6px;
@@ -41,7 +41,7 @@ body {
 }
 
 .interaction button:hover {
-  background-color: #4a4a4a;
+  background-color: #852d2d;
   transform: translateY(-1px);
 }
 
@@ -256,4 +256,21 @@ body {
   .preview h2 {
     font-size: 1.25rem;
   }
+}
+
+/* Add distinct colors for copy buttons */
+.interaction button:nth-child(2) {
+  background-color: #198754;
+}
+
+.interaction button:nth-child(2):hover {
+  background-color: #157347;
+}
+
+.interaction button:nth-child(3) {
+  background-color: #0d6efd;
+}
+
+.interaction button:nth-child(3):hover {
+  background-color: #0b5ed7;
 }
