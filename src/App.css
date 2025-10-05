@@ -280,3 +280,44 @@ body {
 .interaction button:nth-child(3):hover {
   background-color: #0b5ed7;
 }
+
+.editor-wrapper {
+  position: relative;
+  display: flex;
+  font-family: 'Fira Code', monospace;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  background-color: #2a2a2a;
+  overflow: hidden;
+  flex: 1;
+  min-height: 500px;
+}
+
+.line-numbers {
+  width: 40px;
+  background-color: #2a2a2a;
+  color: #777;
+  padding: 20px 0 20px 10px;
+  text-align: right;
+  user-select: none;
+  line-height: 1.6;
+  overflow: hidden;
+}
+
+.line-numbers > div {
+  height: 1.6em;
+}
+
+.editor-wrapper .editor {
+  flex: 1;
+  padding: 20px;
+  border: none;
+  background: transparent;
+  color: #e0e0e0;
+  font-size: 16px;
+  line-height: 1.6;
+  resize: none;
+  outline: none;
+  height: 100%;
+  overflow: auto;
+}

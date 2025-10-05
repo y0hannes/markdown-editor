@@ -44,11 +44,27 @@ const App: React.FC = () => {
       </div>
 
       <div className='main'>
-        <textarea
-          className='editor'
-          value={markdown}
-          onChange={(e) => setMarkdown(e.target.value)}
-        />
+        <div className='editor-wrapper'>
+          <div className='line-numbers' aria-hidden='true'>
+            {markdown.split('\n').map((_, index) => (
+              <div key={index}>{index + 1}</div>
+            ))}
+          </div>
+          <textarea
+            className='editor'
+            value={markdown}
+            onChange={(e) => setMarkdown(e.target.value)}
+            onScroll={(e) => {
+              const gutter = document.querySelector(
+                '.line-numbers'
+              ) as HTMLDivElement;
+              if (gutter) {
+                gutter.scrollTop = (e.target as HTMLTextAreaElement).scrollTop;
+              }
+            }}
+          />
+        </div>
+
         <div
           className='preview'
           dangerouslySetInnerHTML={{ __html: marked(markdown) }}
