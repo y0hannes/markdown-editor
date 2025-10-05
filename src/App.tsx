@@ -38,9 +38,20 @@ const App: React.FC = () => {
   return (
     <div className='container'>
       <div className='interaction'>
-        <button onClick={() => setMarkdown('')}>Clear All</button>
-        <button onClick={copyMarkdown}>{copyMarkdownLabel}</button>
-        <button onClick={copyHTML}>{copyHtmlLabel}</button>
+        <a
+          href='https://github.com/y0hannes/markdown-editor'
+          className='github-link'
+          target='_blank'
+          rel='noopener noreferrer'
+          aria-label='GitHub Repository'
+        >
+          <i className='fab fa-github'></i>
+        </a>
+        <div className='button-group'>
+          <button onClick={() => setMarkdown('')}>Clear All</button>
+          <button onClick={copyMarkdown}>{copyMarkdownLabel}</button>
+          <button onClick={copyHTML}>{copyHtmlLabel}</button>
+        </div>
       </div>
 
       <div className='main'>
